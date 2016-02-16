@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="stkx" style="min-width:300px;" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exchange Extension</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+    </head>
+    <body>
+
+        <div ng-controller="stockTicker">
+
+          <div ng-repeat="stock in stockTicker">
+            <p>{{ stock.stockName }}</p><p>{{ stock.stockPrice }}</p>
+          </div>
+
+          <input ng-model="newStock">
+          <button ng-click="addStock(newStock)" ng-disabled="newStock.length != 4">Add Stock</button>
+        </div>
+
+
+
+
+        <script type="text/javascript" src="jquery-2.2.0.min.js"></script>
+        <script type="text/javascript" src="/node_modules/angular/angular.min.js"></script>
+        <script type="text/javascript" src="stkx.js"></script>
+
+
+        <script type="text/javascript" src="content.js"></script>
+
+    </body>
+</html>
